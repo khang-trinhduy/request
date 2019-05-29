@@ -1,0 +1,46 @@
+﻿@model IEnumerable<RequestTemplate.Models.Request>
+
+@{
+    ViewData["Title"] = "Danh sách quy trình đã tạo";
+}
+
+<h1>Danh sách quy trình</h1>
+
+<div class="create">
+    <a asp-action="Create">Tạo mới quy trình</a>
+    <label class="control-label"> hoặc chọn trong danh sách các quy trình đã tạo</label>
+</div>
+
+<div class="flow-main-page">
+    <div class="select-flow-page">
+        <div id="flow-list">
+            <select id="flows" class="custom-select" asp-items="@ViewBag.flows">
+                <option value="">Chọn</option>
+            </select>
+        </div>
+        <div id="select-flow">
+            <input id="btn-select-flow" class="btn btn-primary" type="button" value="Ok"/>
+        </div>
+    </div>
+    <div class="flow-page">
+        <div class="progressing-page">
+        </div>
+    </div>
+    <div class="task-page">
+
+    </div>
+</div>
+
+<script>
+    $('#btn-select-flow').on('click', function(){
+        if($('#flows').val() != '')
+        {
+            var url = '@Url.Action("ChangeRequest", "Requests")' + "?id=" + $('#flows').val();
+            $('.progressing-page').load(url, function(){
+                $('.progressing-page').fadeIn('slow');
+            });
+
+
+        }
+    });
+</script>

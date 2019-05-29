@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "fullname": "Nguyen Van A",
+        "Age": 19,
+        "datatype": 7
+    },
+    {
+        "id": 1,
+        "fullname": "Nguyen Van B",
+        "Age": 18,
+        "datatype": 7
+    },
+    {
+        "id": 2,
+        "fullname": "Nguyen Van C",
+        "Age": 20,
+        "datatype": 7
+    },
+    {
+        "id": 3,
+        "fullname": "Nguyen Van D",
+        "Age": 29,
+        "datatype": 7
+    },
+    {
+        "id": 4,
+        "fullname": "Nguyen Van E",
+        "Age": 16,
+        "datatype": 7
+    }
+]

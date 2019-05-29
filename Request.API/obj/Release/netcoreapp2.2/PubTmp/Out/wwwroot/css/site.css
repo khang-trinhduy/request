@@ -1,0 +1,170 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    /*padding-top: 80px;*/
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+.signin-wrapper {
+    display: block;
+}
+
+.signin-container {
+    opacity: 1;
+    pointer-events: auto;
+    display: table;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    z-index: 1000000;
+}
+
+.signin-overlay {
+    background: -webkit-radial-gradient(#40404b, #111118) rgba(34,34,40,0.94);
+    background: radial-gradient(#40404b, #111118) rgba(34,34,40,0.94);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: -1;
+    -webkit-transition: opacity 0.2s ease-in 0.4s;
+    transition: opacity 0.2s ease-in 0.4s;
+}
+
+.signin-content {
+    vertical-align: middle;
+    display: table-cell;
+    margin: auto;
+    overflow-y: auto;
+    
+    -webkit-transition: -webkit-transform 0.6s, opacity 0.6s;
+    -webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
+    transition: opacity 0.6s, -webkit-transform 0.6s;
+    transition: transform 0.6s, opacity 0.6s;
+    transition: transform 0.6s, opacity 0.6s, -webkit-transform 0.6s;
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+    box-shadow: 0 0 40px 4px #111118;
+}
+
+    .signin-content .signin-form {
+        height: 100%;
+        position: relative;
+    }
+
+    .signin-content .panel {
+        width: 300px;
+        margin: 0 auto;
+        max-height: 100vh;
+        opacity: 1;
+        -webkit-transform: translateY(0%) scale(1);
+        transform: translateY(0%) scale(1);
+        border: none;
+    }
+
+.signin-container .panel-heading {
+    text-align: center;
+}
+
+    .signin-container .panel-heading .heading-logo {
+        height: 30px;
+    }
+
+    .signin-container .panel-heading .heading-title {
+        font-size: 22px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 0 10px;
+    }
+
+.signin-content .panel-body {
+    position: relative;
+    padding: 0;
+}
+
+.signin-content .singin-local {
+    height: 100%;
+}
+
+    .signin-content .singin-local .signin-local-content {
+        padding: 0 15px;
+    }
+
+    .signin-content .singin-local form {
+        height: 100%;
+    }
+
+.signin-content .signin-external {
+    padding: 15px;
+}
+
+    .signin-content .signin-external p {
+        display: block;
+        margin: 0 auto;
+        text-align: center
+    }
+
+    .signin-content .signin-external hr {
+        margin-bottom: 0;
+    }
+
+.signin-content .panel .btn-signin {
+    margin-top: 50px;
+    border: 0;
+    padding: 14px;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 0 0 5px 5px;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #00796B;
+}
+
+
+/*opacity: 0.9;
+        -webkit-transition: opacity 0.3s ease-in 0s;
+transition: opacity 0.3s ease-in 0s;*/
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}

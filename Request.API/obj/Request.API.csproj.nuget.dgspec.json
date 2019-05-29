@@ -1,0 +1,633 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\trinh\\source\\WTF\\API\\Request.API\\Request.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj",
+        "projectName": "Catalog.API",
+        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj",
+        "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\trinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\trinh\\source\\WTF\\API\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Infrastructure\\Infrastructure.csproj"
+              },
+              "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj"
+              },
+              "C:\\Users\\trinh\\source\\WTF\\API\\WebHost.Customization\\WebHost.Customization.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\WebHost.Customization\\WebHost.Customization.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[12.1.2, )"
+            },
+            "IdentityServer4.AccessTokenValidation": {
+              "target": "Package",
+              "version": "[2.7.0, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Serilog.Enrichers.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Sinks.ColoredConsole": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\trinh\\source\\WTF\\API\\Dms.API\\Dms.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\Dms.API\\Dms.API.csproj",
+        "projectName": "Dms.API",
+        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Dms.API\\Dms.API.csproj",
+        "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\Dms.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\trinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj"
+              },
+              "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj"
+              },
+              "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj",
+        "projectName": "Identity.API",
+        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj",
+        "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\trinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\trinh\\source\\WTF\\API\\WebHost.Customization\\WebHost.Customization.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\WebHost.Customization\\WebHost.Customization.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "IdentityServer4": {
+              "target": "Package",
+              "version": "[2.3.2, )"
+            },
+            "IdentityServer4.AspNetIdentity": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "IdentityServer4.EntityFramework": {
+              "target": "Package",
+              "version": "[2.3.2, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.4.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Sendgrid": {
+              "target": "Package",
+              "version": "[9.10.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.7.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\trinh\\source\\WTF\\API\\Infrastructure\\Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\trinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\trinh\\source\\WTF\\API\\Request.API\\Request.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\Request.API\\Request.API.csproj",
+        "projectName": "Request.API",
+        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Request.API\\Request.API.csproj",
+        "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\Request.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\trinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj"
+              },
+              "C:\\Users\\trinh\\source\\WTF\\API\\Dms.API\\Dms.API.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Dms.API\\Dms.API.csproj"
+              },
+              "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj"
+              },
+              "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[4.9.1, )"
+            },
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[12.1.2, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.1.3, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[2.1.3, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.8.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Sinks.ColoredConsole": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Serilog.Sinks.RollingFile": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj",
+        "projectName": "SharedKernel",
+        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj",
+        "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\trinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "CSharpFunctionalExtensions": {
+              "target": "Package",
+              "version": "[1.13.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\trinh\\source\\WTF\\API\\WebHost.Customization\\WebHost.Customization.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\WebHost.Customization\\WebHost.Customization.csproj",
+        "projectName": "WebHost.Customization",
+        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\WebHost.Customization\\WebHost.Customization.csproj",
+        "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\WebHost.Customization\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\trinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Request.API.Models.Action" Collapsed="true">
+    <Position X="6.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAgAAAAQAAAAAEEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Request.API.Models.Activity" Collapsed="true">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAiAAAAAgAAAAQgAgEAEAAAAAAABAgAAAA=</HashCode>
+      <FileName>Models\Activity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Request.API.Models.ActivityAdapter" Collapsed="true">
+    <Position X="1.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAiAAAAAgAAAAQgAgkAEAAAAEAQBAgAAAA=</HashCode>
+      <FileName>Models\Activity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Request.API.Models.EmailActivityOperator" Collapsed="true">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAiAAIAAgAAAAQgAgkAEAAAAEAABAgAAAA=</HashCode>
+      <FileName>Models\Activity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Request.API.Models.ExtendActivity" Collapsed="true">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Activity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Request.API.Models.EmailSender" Collapsed="true">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Activity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Request.API.Models.Process" Collapsed="true">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAIAAAAAAAAIAAAAQIAgAAAAAAAAAABIAAAAA=</HashCode>
+      <FileName>Models\Process.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Request.API.Models.TransitionRule" Collapsed="true">
+    <Position X="8" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAIAAAAAAAgAAACAAAAAAEAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Process.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Request.API.Models.Role" Collapsed="true">
+    <Position X="10.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAQAAAAEAAAgAAAAQAAAAAEAAAAAAABEAAAAA=</HashCode>
+      <FileName>Models\Process.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Request.API.Model.Request" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgBAAAAAAEgAAgAAACoIgAAAGFAQAQAIAIAAAAA=</HashCode>
+      <FileName>Models\Request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Request.API.Model.Task" Collapsed="true">
+    <Position X="9" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACABACAAAEQAAAAAAAAAAAAAgAgAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\Request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Request.API.Model.Data" Collapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAAIAAEQAAAAAAAAAAAAAgAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\Request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Request.API.Models.State" Collapsed="true">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAgAAAAQAAgAAEEAAAAAAAICAAAA=</HashCode>
+      <FileName>Models\State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
