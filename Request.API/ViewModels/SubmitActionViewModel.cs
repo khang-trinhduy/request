@@ -12,7 +12,6 @@ namespace Request.API.ViewModels
         public string approver { get; set; }
         public List<DataCreateModel> data { get; set; }
         public bool doactivity { get; set; }
-        public Trigger Trigger { get; set; }
         public SubmitActionViewModel(string source, string role, string action, string activity, List<DataCreateModel> data, bool doactivity = true)
         {
             this.source = source;

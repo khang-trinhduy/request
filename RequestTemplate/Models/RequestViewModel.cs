@@ -113,15 +113,6 @@ namespace RequestTemplate.Models
         public string NextNode { get; set; }
         public int Id { get; set; }
         public string Action { get; set; }
-        public TriggerCreateModel Trigger { get; set; }
-    }
-
-    public class TriggerCreateModel
-    {
-        public int Id { get; set; }
-        public DataCreateModel Data { get; set; }
-        public ICollection<Event> Events { get; set; }
-        public Consequence Consequence { get; set; }
     }
 
     public class RoleViewModel

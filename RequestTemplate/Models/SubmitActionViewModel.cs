@@ -11,6 +11,5 @@ namespace RequestTemplate.Models.SubmitActionViewModel
         public string approver { get; set; }
         public List<DataCreateModel> data { get; set; }
         public bool doactivity { get; set; }
-        public Trigger Trigger { get; set; }
     }
 }

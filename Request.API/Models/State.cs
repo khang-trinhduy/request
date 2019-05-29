@@ -16,7 +16,6 @@ namespace Request.API.Models
         [Required]
         public string Name { get; set; }
         public string Description { get; set; }
-        //[JsonConverter(typeof(ActivityJsonConverter))]
         public List<Activity> Activities { get; set; }
         public List<Role> Roles { get; set; }
         [ForeignKey("ProcessId")]

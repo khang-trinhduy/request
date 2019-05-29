@@ -42,21 +42,18 @@ namespace Request.API.Controllers
 
         public async Task<IActionResult> Get([FromQuery]string filter, [FromQuery]int pageSize = 10, [FromQuery] int pageIndex = 0)
         {
-            var requests = await _context.Requests.Include(r => r.Process)
+            var requests = _context.Requests.Include(r => r.Process)
                 .ThenInclude(p => p.Actions).Include(r => r.Process)
                 .ThenInclude(p => p.States).Include(r => r.Process)
                 .ThenInclude(p => p.Activities).Include(r => r.Process)
-                .ThenInclude(p => p.Rules).ThenInclude(r => r.Trigger)
-                .ThenInclude(t => t.Events).ThenInclude(e => e.Conditions)
-                .Include(r => r.Process).ThenInclude(p => p.Rules).ThenInclude(r => r.Trigger)
-                .ThenInclude(t => t.Consequence).Include(r => r.Process)
+                .Include(r => r.Process)
                 .ThenInclude(p => p.Roles).Include(r => r.Process)
                 .ThenInclude(p => p.Nodes).ThenInclude(n => n.Childs)
                 .Include(r => r.Process).ThenInclude(p => p.Nodes).ThenInclude(n => n.Actions)
                 .Include(r => r.CurrentState).Include(r => r.CurrentNode)
-                .Include(r => r.Data).Include(r => r.Tasks)
-                .ToListAsync();
-            return Ok(_mapper.Map<List<RequestViewModel>>(requests));
+                .Include(r => r.Data).Include(r => r.Tasks);
+
+            return Ok(_mapper.Map<List<RequestViewModel>>(requests.ToListAsync()));
         }
         [HttpGet]
         [Route("{id:int}")]
@@ -66,11 +63,8 @@ namespace Request.API.Controllers
                 .ThenInclude(p => p.Actions).Include(r => r.Process)
                 .ThenInclude(p => p.States).Include(r => r.Process)
                 .ThenInclude(p => p.Activities).Include(r => r.Process)
-                .ThenInclude(p => p.Rules).ThenInclude(r => r.Trigger)
-                .ThenInclude(t => t.Events).ThenInclude(e => e.Conditions)
-                .Include(r => r.Process).ThenInclude(p => p.Rules).ThenInclude(r => r.Trigger)
-                .ThenInclude(t => t.Consequence).Include(r => r.Process)
-                .ThenInclude(p => p.Roles).Include(r => r.Process)
+                .ThenInclude(p => p.Rules).Include(r => r.Process).ThenInclude(p => p.Rules)
+                .Include(r => r.Process).ThenInclude(p => p.Roles).Include(r => r.Process)
                 .ThenInclude(p => p.Nodes).ThenInclude(n => n.Childs)
                 .Include(r => r.Process).ThenInclude(p => p.Nodes).ThenInclude(n => n.Actions)
                 .Include(r => r.CurrentState).Include(r => r.CurrentNode)
@@ -82,20 +76,6 @@ namespace Request.API.Controllers
                 return NotFound();
             }
             return Ok(_mapper.Map<RequestViewModel>(request));
-        }
-
-        [HttpGet]
-        [Route("triggerconfig")]
-        public async Task<IActionResult> GetTriggerConfiguration()
-        {
-            StreamReader rd = new StreamReader("trigger-configuration.json");
-            var content = rd.ReadToEnd();
-            if (content == null)
-            {
-                return NotFound("cannot read config file");
-            }
-            List<TriggerConf> configurations = JsonConvert.DeserializeObject<List<TriggerConf>>(content);
-            return Ok(configurations);
         }
 
         [HttpGet]
@@ -254,10 +234,9 @@ namespace Request.API.Controllers
                 .ThenInclude(p => p.Actions).Include(r => r.Process)
                 .ThenInclude(p => p.States).Include(r => r.Process)
                 .ThenInclude(p => p.Activities).Include(r => r.Process)
-                .ThenInclude(p => p.Rules).ThenInclude(r => r.Trigger)
-                .ThenInclude(t => t.Events).ThenInclude(e => e.Conditions)
-                .Include(r => r.Process).ThenInclude(p => p.Rules).ThenInclude(r => r.Trigger)
-                .ThenInclude(t => t.Consequence).Include(r => r.Process)
+                .ThenInclude(p => p.Rules)
+                .Include(r => r.Process).ThenInclude(p => p.Rules)
+                .Include(r => r.Process)
                 .ThenInclude(p => p.Roles).Include(r => r.Process)
                 .ThenInclude(p => p.Nodes).ThenInclude(n => n.Childs)
                 .Include(r => r.Process).ThenInclude(p => p.Nodes).ThenInclude(n => n.Actions)

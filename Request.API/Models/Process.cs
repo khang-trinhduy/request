@@ -223,14 +223,6 @@ namespace Request.API.Models
         public NodeViewModelSimplified CurrentNode { get; set; }
         public NodeViewModelSimplified NextNode { get; set; }
         public ActionViewModel Action { get; set; }
-        public TriggerViewModel Trigger {get; set; }
-    }
-
-    public class TriggerViewModel
-    {
-        public int Id { get; set; }
-        public Consequence Consequence { get; set; }
-        public List<Event> Events { get; set; }
     }
 
     public class Role

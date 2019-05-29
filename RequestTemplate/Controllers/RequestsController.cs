@@ -41,7 +41,7 @@ namespace RequestTemplate.Controllers
         public async Task<IActionResult> Index()
         {
             var client = new HttpClient();
-            var url = "http://" + Configuration["url"] + ":88/api/v1/requests/";
+            var url = Configuration["url"] + "/api/v1/requests/";
             var content = await client.GetStringAsync(url);
             List<Request> data = JsonConvert.DeserializeObject<List<Request>>(content);
             List<SelectListItem> flows = new List<SelectListItem>();
@@ -58,7 +58,7 @@ namespace RequestTemplate.Controllers
         }
 
         [HttpPost]
-        public IActionResult StartCampaign(int id, string campaign, Trigger t)
+        public IActionResult StartCampaign(int id, string campaign)
         {
             var camp = campaigns.FirstOrDefault(c => c.Name.Equals(campaign));
             
@@ -80,7 +80,7 @@ namespace RequestTemplate.Controllers
         public async Task<IActionResult> Dashboard()
         {
             var client = new HttpClient();
-            var content = await client.GetStringAsync("http://" + Configuration["url"] + ":88/api/v1/requests/tasks?role=hr");
+            var content = await client.GetStringAsync(Configuration["url"] + "/api/v1/requests/tasks?role=hr");
             List<Request> requests = JsonConvert.DeserializeObject<List<Request>>(content);
             return View(requests);
         }
@@ -98,7 +98,7 @@ namespace RequestTemplate.Controllers
                 return NotFound();
             }
             var client = new HttpClient();
-            var content = await client.GetStringAsync("http://" + Configuration["url"] + ":88/api/v1/requests/" + id.ToString());
+            var content = await client.GetStringAsync(Configuration["url"] + "/api/v1/requests/" + id.ToString());
             var request = JsonConvert.DeserializeObject<Request>(content);
             return PartialView("progressing", request);
         }
@@ -107,7 +107,7 @@ namespace RequestTemplate.Controllers
         public async Task<IActionResult> Details(int? id)
         {
             var client = new HttpClient();
-            var content = await client.GetStringAsync("http://" + Configuration["url"] + ":88/api/v1/requests/" + id.ToString());
+            var content = await client.GetStringAsync(Configuration["url"] + "/api/v1/requests/" + id.ToString());
             var request = JsonConvert.DeserializeObject<Request>(content);
             if (request == null)
             {
@@ -131,7 +131,7 @@ namespace RequestTemplate.Controllers
             };
             var client = new HttpClient();
             var content = new StringContent(JsonConvert.SerializeObject(task), Encoding.UTF8, "application/json");
-            var result = await client.PutAsync("http://" + Configuration["url"] + ":88/api/v1/requests/" + model.RequestId.ToString() + "?autoadvance=" + model.AutoAdvance, content);
+            var result = await client.PutAsync(Configuration["url"] + "/api/v1/requests/" + model.RequestId.ToString() + "?autoadvance=" + model.AutoAdvance, content);
 
             if (result.IsSuccessStatusCode)
             {
@@ -152,7 +152,7 @@ namespace RequestTemplate.Controllers
             {
                 if (istree) {
                     var content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
-                    var result = await client.PutAsync("http://" + Configuration["url"] + ":88/api/v1/requests/submitnodeaction/" + id.ToString(), content);
+                    var result = await client.PutAsync(Configuration["url"] + "/api/v1/requests/submitnodeaction/" + id.ToString(), content);
                     if (result.IsSuccessStatusCode)
                     {
                         return Json("Thao tác thành công, click \"Ok\" để load lại quy trình");
@@ -169,8 +169,8 @@ namespace RequestTemplate.Controllers
                             }
                         };
                         var content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
-                        var result = await client.PutAsync("http://" + Configuration["url"] +
-                            ":88/api/v1/requests/submitaction/" + id.ToString() + "?trigger=true", content);
+                        var result = await client.PutAsync(Configuration["url"] +
+                            "/api/v1/requests/submitaction/" + id.ToString() + "?trigger=true", content);
                         if (result.IsSuccessStatusCode)
                         {
                             return Json("Thao tác thành công, click \"Ok\" để load lại quy trình");
@@ -179,8 +179,8 @@ namespace RequestTemplate.Controllers
                     }
                     else {
                         var content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
-                        var result = await client.PutAsync("http://" + Configuration["url"] +
-                            ":88/api/v1/requests/submitaction/" + id.ToString() + "?trigger=false", content);
+                        var result = await client.PutAsync(Configuration["url"] +
+                            "/api/v1/requests/submitaction/" + id.ToString() + "?trigger=false", content);
                         if (result.IsSuccessStatusCode)
                         {
                             return Json("Thao tác thành công, click \"Ok\" để load lại quy trình");
@@ -294,25 +294,6 @@ namespace RequestTemplate.Controllers
                 };
                 new_process.Actions.Add(new_action);
             }
-            var trigger = new Trigger {
-                Consequence = new Consequence {
-                    Method = "AddContact",
-                    Name = "Campaign"
-                },
-                Events = new List<Event> {
-                    new Event {
-                        Conditions = new List<Condition> {
-                            new Condition {
-                                Operator = "GreaterOrEqual",
-                                Param = "Age",
-                                Threshold = "18",
-                                Type = "Integer"
-                            }
-                        },
-                        Name = "Must be 18 or above to enter this campaign"
-                    }
-                }
-            };
             foreach (var rule in model.Process.Rules)
             {
                 var new_rule = new TransitionRule
@@ -322,7 +303,6 @@ namespace RequestTemplate.Controllers
                     NextState = new_process.States.FirstOrDefault(s => s.Name == rule.NextState)
                 };
                 if (new_rule.CurrentState.Activities[0].ActivityType == ActivityType.Campaign) {
-                    new_rule.Trigger = trigger;
                 }
                 new_process.Rules.Add(new_rule);
             }
@@ -338,7 +318,7 @@ namespace RequestTemplate.Controllers
             };
             var client = new HttpClient();
             var content = new StringContent(JsonConvert.SerializeObject(new_request), Encoding.UTF8, "application/json");
-            var result = await client.PostAsync("http://" + Configuration["url"] + ":88/api/v1/requests/", content);
+            var result = await client.PostAsync(Configuration["url"] + "/api/v1/requests/", content);
             if (!result.IsSuccessStatusCode)
             {
                 return Json("Lỗi: không tìm thấy máy chủ");
@@ -453,7 +433,7 @@ namespace RequestTemplate.Controllers
             };
             var client = new HttpClient();
             var content = new StringContent(JsonConvert.SerializeObject(new_request), Encoding.UTF8, "application/json");
-            var result = await client.PostAsync("http://" + Configuration["url"] + ":88/api/v1/requests/tree/", content);
+            var result = await client.PostAsync(Configuration["url"] + "/api/v1/requests/tree/", content);
             if (!result.IsSuccessStatusCode)
             {
                 return Json("Lỗi: không tìm thấy máy chủ");

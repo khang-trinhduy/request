@@ -15,11 +15,9 @@ namespace Request.API.Models
         public Action Action { get; set; }
         public Process Process { get; set; }
         public int ProcessId { get; set; }
-        public Trigger Trigger { get; set; }
-
         public TransitionRule() : base() { }
 
-        private TransitionRule(State currentstate, State nextstate, Action action, Process process, Node currentnode, Node nextnode, Trigger trigger)
+        private TransitionRule(State currentstate, State nextstate, Action action, Process process, Node currentnode, Node nextnode)
         {
             CurrentNode = currentnode;
             NextNode = nextnode;
@@ -27,12 +25,7 @@ namespace Request.API.Models
             NextState = nextstate;
             Process = process;
             Action = action;
-            Trigger = trigger;
         }
 
-        // public static TransitionRule Create(int processID, int currentStateID, int nextStateID)
-        // {
-        //     return new TransitionRule(processID, currentStateID, nextStateID);
-        // }
     }
 }

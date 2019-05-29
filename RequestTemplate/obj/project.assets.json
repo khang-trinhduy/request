@@ -12928,11 +12928,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\trinh\\source\\repos\\RequestTemplate\\requesttemplate\\RequestTemplate.csproj",
+      "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\Request\\RequestTemplate\\RequestTemplate.csproj",
       "projectName": "RequestTemplate",
-      "projectPath": "C:\\Users\\trinh\\source\\repos\\RequestTemplate\\requesttemplate\\RequestTemplate.csproj",
+      "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Request\\RequestTemplate\\RequestTemplate.csproj",
       "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\trinh\\source\\repos\\RequestTemplate\\requesttemplate\\obj\\",
+      "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\Request\\RequestTemplate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
