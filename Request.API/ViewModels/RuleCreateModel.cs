@@ -11,4 +11,5 @@ namespace Request.API.ViewModels
         public NodeCreateModel NextNode { get; set; }
         public ActionCreateModel Action { get; set; }
     }
+
 }

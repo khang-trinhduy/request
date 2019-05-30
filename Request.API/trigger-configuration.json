@@ -1,83 +1,633 @@
-[{
-    "name": "campaign",
-    "event": [{
-            "name": "start"
-        },
-        {
-            "name": "stop"
-        },
-        {
-            "name": "end"
-        },
-        {
-            "name": "update"
-        }
-    ],
-    "action": [{
-            "name": "send email"
-        },
-        {
-            "name": "subscribe"
-        },
-        {
-            "name": "unsubscribe"
-        }
-    ],
-    "target": [{
-        "name": "contact",
-        "condition": [{
-                "param": "age",
-                "operator": [{
-                        "name": ">="
-                    },
-                    {
-                        "name": "<="
-                    },
-                    {
-                        "name": ">"
-                    },
-                    {
-                        "name": "<"
-                    },
-                    {
-                        "name": "="
-                    }
-                ],
-                "type": "integer"
+[
+{
+    "id": 2,
+    "process": {
+        "id": 2,
+        "name": "test",
+        "actions": [],
+        "states": [{
+            "id": 3,
+            "stateType": 0,
+            "name": "1",
+            "description": "",
+            "activities": [{
+                "id": 3,
+                "activityType": 3,
+                "name": "1",
+                "description": null,
+                "duration": 0,
+                "isRequired": true,
+                "roles": [{
+                    "id": 1,
+                    "name": "other"
+                }],
+                "absentName": null,
+                "dayOff": "0001-01-01T00:00:00",
+                "reason": null,
+                "isReallyNotApproved": false,
+                "approverName": null,
+                "fullName": null,
+                "campainName": null,
+                "isRunning": false,
+                "subscribers": null,
+                "discriminator": "GENERIC"
+            }],
+            "roles": [{
+                "id": 1,
+                "name": "other"
+            }],
+            "processId": 2,
+            "eta": "0001-01-01T00:00:00"
+        }, {
+            "id": 4,
+            "stateType": 2,
+            "name": "2",
+            "description": "",
+            "activities": [{
+                "id": 4,
+                "activityType": 3,
+                "name": "2",
+                "description": null,
+                "duration": 0,
+                "isRequired": true,
+                "roles": [{
+                    "id": 2,
+                    "name": "other"
+                }],
+                "absentName": null,
+                "dayOff": "0001-01-01T00:00:00",
+                "reason": null,
+                "isReallyNotApproved": false,
+                "approverName": null,
+                "fullName": null,
+                "campainName": null,
+                "isRunning": false,
+                "subscribers": null,
+                "discriminator": "GENERIC"
+            }],
+            "roles": [{
+                "id": 2,
+                "name": "other"
+            }],
+            "processId": 2,
+            "eta": "0001-01-01T00:00:00"
+        }, {
+            "id": 5,
+            "stateType": 1,
+            "name": "3",
+            "description": "",
+            "activities": [{
+                "id": 5,
+                "activityType": 3,
+                "name": "3",
+                "description": null,
+                "duration": 0,
+                "isRequired": true,
+                "roles": [{
+                    "id": 3,
+                    "name": "other"
+                }],
+                "absentName": null,
+                "dayOff": "0001-01-01T00:00:00",
+                "reason": null,
+                "isReallyNotApproved": false,
+                "approverName": null,
+                "fullName": null,
+                "campainName": null,
+                "isRunning": false,
+                "subscribers": null,
+                "discriminator": "GENERIC"
+            }],
+            "roles": [{
+                "id": 3,
+                "name": "other"
+            }],
+            "processId": 2,
+            "eta": "0001-01-01T00:00:00"
+        }],
+        "nodes": [],
+        "rules": [{
+            "id": 2,
+            "currentState": {
+                "id": 3,
+                "stateType": 0,
+                "name": "1",
+                "description": ""
             },
-            {
-                "param": "email",
-                "operator": [{
-                        "name": "!="
-                    },
-                    {
-                        "name": "=="
-                    }
-                ],
-                "type": "string"
+            "nextState": {
+                "id": 4,
+                "stateType": 2,
+                "name": "2",
+                "description": ""
             },
-            {
-                "param": "phonenumber",
-                "operator": [{
-                        "name": "!="
-                    },
-                    {
-                        "name": "=="
-                    }
-                ],
-                "type": "string"
+            "currentNode": null,
+            "nextNode": null,
+            "action": null
+        }, {
+            "id": 3,
+            "currentState": {
+                "id": 4,
+                "stateType": 2,
+                "name": "2",
+                "description": ""
             },
-            {
-                "param": "fullname",
-                "operator": [{
-                        "name": "!="
-                    },
-                    {
-                        "name": "=="
-                    }
-                ],
-                "type": "string"
-            }
-        ]
-    }]
+            "nextState": {
+                "id": 5,
+                "stateType": 1,
+                "name": "3",
+                "description": ""
+            },
+            "currentNode": null,
+            "nextNode": null,
+            "action": null
+        }],
+        "roles": [{
+            "id": 1,
+            "name": "other"
+        }, {
+            "id": 2,
+            "name": "other"
+        }, {
+            "id": 3,
+            "name": "other"
+        }],
+        "activities": [{
+            "id": 3,
+            "activityType": 3,
+            "name": "1",
+            "description": null,
+            "duration": 0,
+            "isRequired": true,
+            "roles": [{
+                "id": 1,
+                "name": "other"
+            }],
+            "absentName": null,
+            "dayOff": "0001-01-01T00:00:00",
+            "reason": null,
+            "isReallyNotApproved": false,
+            "approverName": null,
+            "fullName": null,
+            "campainName": null,
+            "isRunning": false,
+            "subscribers": null,
+            "discriminator": "GENERIC"
+        }, {
+            "id": 4,
+            "activityType": 3,
+            "name": "2",
+            "description": null,
+            "duration": 0,
+            "isRequired": true,
+            "roles": [{
+                "id": 2,
+                "name": "other"
+            }],
+            "absentName": null,
+            "dayOff": "0001-01-01T00:00:00",
+            "reason": null,
+            "isReallyNotApproved": false,
+            "approverName": null,
+            "fullName": null,
+            "campainName": null,
+            "isRunning": false,
+            "subscribers": null,
+            "discriminator": "GENERIC"
+        }, {
+            "id": 5,
+            "activityType": 3,
+            "name": "3",
+            "description": null,
+            "duration": 0,
+            "isRequired": true,
+            "roles": [{
+                "id": 3,
+                "name": "other"
+            }],
+            "absentName": null,
+            "dayOff": "0001-01-01T00:00:00",
+            "reason": null,
+            "isReallyNotApproved": false,
+            "approverName": null,
+            "fullName": null,
+            "campainName": null,
+            "isRunning": false,
+            "subscribers": null,
+            "discriminator": "GENERIC"
+        }]
+    },
+    "title": "123",
+    "userID": 0,
+    "userName": "test user",
+    "currentState": {
+        "id": 3,
+        "stateType": 0,
+        "name": "1",
+        "description": ""
+    },
+    "currentNode": null,
+    "dateRequested": "0001-01-01T00:00:00",
+    "histories": [],
+    "tasks": [{
+        "id": 1,
+        "activity": {
+            "id": 3,
+            "activityType": 3,
+            "name": "1",
+            "description": null,
+            "duration": 0,
+            "isRequired": true,
+            "roles": [{
+                "id": 1,
+                "name": "other"
+            }],
+            "absentName": null,
+            "dayOff": "0001-01-01T00:00:00",
+            "reason": null,
+            "isReallyNotApproved": false,
+            "approverName": null,
+            "fullName": null,
+            "campainName": null,
+            "isRunning": false,
+            "subscribers": null,
+            "discriminator": "GENERIC"
+        },
+        "isDone": false,
+        "start": "0001-01-01T00:00:00",
+        "deadLine": "0001-01-01T00:00:00",
+        "userRole": null
+    }, {
+        "id": 2,
+        "activity": {
+            "id": 4,
+            "activityType": 3,
+            "name": "2",
+            "description": null,
+            "duration": 0,
+            "isRequired": true,
+            "roles": [{
+                "id": 2,
+                "name": "other"
+            }],
+            "absentName": null,
+            "dayOff": "0001-01-01T00:00:00",
+            "reason": null,
+            "isReallyNotApproved": false,
+            "approverName": null,
+            "fullName": null,
+            "campainName": null,
+            "isRunning": false,
+            "subscribers": null,
+            "discriminator": "GENERIC"
+        },
+        "isDone": false,
+        "start": "0001-01-01T00:00:00",
+        "deadLine": "0001-01-01T00:00:00",
+        "userRole": null
+    }, {
+        "id": 3,
+        "activity": {
+            "id": 5,
+            "activityType": 3,
+            "name": "3",
+            "description": null,
+            "duration": 0,
+            "isRequired": true,
+            "roles": [{
+                "id": 3,
+                "name": "other"
+            }],
+            "absentName": null,
+            "dayOff": "0001-01-01T00:00:00",
+            "reason": null,
+            "isReallyNotApproved": false,
+            "approverName": null,
+            "fullName": null,
+            "campainName": null,
+            "isRunning": false,
+            "subscribers": null,
+            "discriminator": "GENERIC"
+        },
+        "isDone": false,
+        "start": "0001-01-01T00:00:00",
+        "deadLine": "0001-01-01T00:00:00",
+        "userRole": null
+    }],
+    "data": []
+}, 
+{
+    "id": 3,
+    "process": {
+        "id": 3,
+        "name": "test",
+        "actions": [],
+        "states": [{
+            "id": 6,
+            "stateType": 0,
+            "name": "1",
+            "description": "",
+            "activities": [{
+                "id": 6,
+                "activityType": 3,
+                "name": "1",
+                "description": null,
+                "duration": 0,
+                "isRequired": true,
+                "roles": [{
+                    "id": 4,
+                    "name": "other"
+                }],
+                "absentName": null,
+                "dayOff": "0001-01-01T00:00:00",
+                "reason": null,
+                "isReallyNotApproved": false,
+                "approverName": null,
+                "fullName": null,
+                "campainName": null,
+                "isRunning": false,
+                "subscribers": null,
+                "discriminator": "GENERIC"
+            }],
+            "roles": [{
+                "id": 4,
+                "name": "other"
+            }],
+            "processId": 3,
+            "eta": "0001-01-01T00:00:00"
+        }, {
+            "id": 7,
+            "stateType": 2,
+            "name": "2",
+            "description": "",
+            "activities": [{
+                "id": 7,
+                "activityType": 3,
+                "name": "2",
+                "description": null,
+                "duration": 0,
+                "isRequired": true,
+                "roles": [{
+                    "id": 5,
+                    "name": "other"
+                }],
+                "absentName": null,
+                "dayOff": "0001-01-01T00:00:00",
+                "reason": null,
+                "isReallyNotApproved": false,
+                "approverName": null,
+                "fullName": null,
+                "campainName": null,
+                "isRunning": false,
+                "subscribers": null,
+                "discriminator": "GENERIC"
+            }],
+            "roles": [{
+                "id": 5,
+                "name": "other"
+            }],
+            "processId": 3,
+            "eta": "0001-01-01T00:00:00"
+        }, {
+            "id": 8,
+            "stateType": 1,
+            "name": "3",
+            "description": "",
+            "activities": [{
+                "id": 8,
+                "activityType": 3,
+                "name": "3",
+                "description": null,
+                "duration": 0,
+                "isRequired": true,
+                "roles": [{
+                    "id": 6,
+                    "name": "other"
+                }],
+                "absentName": null,
+                "dayOff": "0001-01-01T00:00:00",
+                "reason": null,
+                "isReallyNotApproved": false,
+                "approverName": null,
+                "fullName": null,
+                "campainName": null,
+                "isRunning": false,
+                "subscribers": null,
+                "discriminator": "GENERIC"
+            }],
+            "roles": [{
+                "id": 6,
+                "name": "other"
+            }],
+            "processId": 3,
+            "eta": "0001-01-01T00:00:00"
+        }],
+        "nodes": [],
+        "rules": [{
+            "id": 4,
+            "currentState": {
+                "id": 6,
+                "stateType": 0,
+                "name": "1",
+                "description": ""
+            },
+            "nextState": {
+                "id": 7,
+                "stateType": 2,
+                "name": "2",
+                "description": ""
+            },
+            "currentNode": null,
+            "nextNode": null,
+            "action": null
+        }, {
+            "id": 5,
+            "currentState": {
+                "id": 7,
+                "stateType": 2,
+                "name": "2",
+                "description": ""
+            },
+            "nextState": {
+                "id": 8,
+                "stateType": 1,
+                "name": "3",
+                "description": ""
+            },
+            "currentNode": null,
+            "nextNode": null,
+            "action": null
+        }],
+        "roles": [{
+            "id": 4,
+            "name": "other"
+        }, {
+            "id": 5,
+            "name": "other"
+        }, {
+            "id": 6,
+            "name": "other"
+        }],
+        "activities": [{
+            "id": 6,
+            "activityType": 3,
+            "name": "1",
+            "description": null,
+            "duration": 0,
+            "isRequired": true,
+            "roles": [{
+                "id": 4,
+                "name": "other"
+            }],
+            "absentName": null,
+            "dayOff": "0001-01-01T00:00:00",
+            "reason": null,
+            "isReallyNotApproved": false,
+            "approverName": null,
+            "fullName": null,
+            "campainName": null,
+            "isRunning": false,
+            "subscribers": null,
+            "discriminator": "GENERIC"
+        }, {
+            "id": 7,
+            "activityType": 3,
+            "name": "2",
+            "description": null,
+            "duration": 0,
+            "isRequired": true,
+            "roles": [{
+                "id": 5,
+                "name": "other"
+            }],
+            "absentName": null,
+            "dayOff": "0001-01-01T00:00:00",
+            "reason": null,
+            "isReallyNotApproved": false,
+            "approverName": null,
+            "fullName": null,
+            "campainName": null,
+            "isRunning": false,
+            "subscribers": null,
+            "discriminator": "GENERIC"
+        }, {
+            "id": 8,
+            "activityType": 3,
+            "name": "3",
+            "description": null,
+            "duration": 0,
+            "isRequired": true,
+            "roles": [{
+                "id": 6,
+                "name": "other"
+            }],
+            "absentName": null,
+            "dayOff": "0001-01-01T00:00:00",
+            "reason": null,
+            "isReallyNotApproved": false,
+            "approverName": null,
+            "fullName": null,
+            "campainName": null,
+            "isRunning": false,
+            "subscribers": null,
+            "discriminator": "GENERIC"
+        }]
+    },
+    "title": "123",
+    "userID": 0,
+    "userName": "test user",
+    "currentState": {
+        "id": 6,
+        "stateType": 0,
+        "name": "1",
+        "description": ""
+    },
+    "currentNode": null,
+    "dateRequested": "0001-01-01T00:00:00",
+    "histories": [],
+    "tasks": [{
+        "id": 4,
+        "activity": {
+            "id": 6,
+            "activityType": 3,
+            "name": "1",
+            "description": null,
+            "duration": 0,
+            "isRequired": true,
+            "roles": [{
+                "id": 4,
+                "name": "other"
+            }],
+            "absentName": null,
+            "dayOff": "0001-01-01T00:00:00",
+            "reason": null,
+            "isReallyNotApproved": false,
+            "approverName": null,
+            "fullName": null,
+            "campainName": null,
+            "isRunning": false,
+            "subscribers": null,
+            "discriminator": "GENERIC"
+        },
+        "isDone": false,
+        "start": "0001-01-01T00:00:00",
+        "deadLine": "0001-01-01T00:00:00",
+        "userRole": null
+    }, {
+        "id": 5,
+        "activity": {
+            "id": 7,
+            "activityType": 3,
+            "name": "2",
+            "description": null,
+            "duration": 0,
+            "isRequired": true,
+            "roles": [{
+                "id": 5,
+                "name": "other"
+            }],
+            "absentName": null,
+            "dayOff": "0001-01-01T00:00:00",
+            "reason": null,
+            "isReallyNotApproved": false,
+            "approverName": null,
+            "fullName": null,
+            "campainName": null,
+            "isRunning": false,
+            "subscribers": null,
+            "discriminator": "GENERIC"
+        },
+        "isDone": false,
+        "start": "0001-01-01T00:00:00",
+        "deadLine": "0001-01-01T00:00:00",
+        "userRole": null
+    }, {
+        "id": 6,
+        "activity": {
+            "id": 8,
+            "activityType": 3,
+            "name": "3",
+            "description": null,
+            "duration": 0,
+            "isRequired": true,
+            "roles": [{
+                "id": 6,
+                "name": "other"
+            }],
+            "absentName": null,
+            "dayOff": "0001-01-01T00:00:00",
+            "reason": null,
+            "isReallyNotApproved": false,
+            "approverName": null,
+            "fullName": null,
+            "campainName": null,
+            "isRunning": false,
+            "subscribers": null,
+            "discriminator": "GENERIC"
+        },
+        "isDone": false,
+        "start": "0001-01-01T00:00:00",
+        "deadLine": "0001-01-01T00:00:00",
+        "userRole": null
+    }],
+    "data": []
 }]

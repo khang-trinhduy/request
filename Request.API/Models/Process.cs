@@ -224,7 +224,6 @@ namespace Request.API.Models
         public NodeViewModelSimplified NextNode { get; set; }
         public ActionViewModel Action { get; set; }
     }
-
     public class Role
     {
         public int Id { get; set; }

@@ -33,6 +33,17 @@ namespace Request.API.Model
         public List<Data> Data { get; set; }
         public Node CurrentNode { get; set; }
 
+        //public Transition Transition { get; set; }
+
+
+        //protected Request() : base()
+        //{
+        //    List<NewAction> actions = new List<NewAction>();
+        //    List<State> states = new List<State>();
+        //    List<TransitionRule> rules = new List<TransitionRule>();
+        //    Process = new Process("Template");
+        //}
+
         public Request() : base()
         {
             
@@ -295,6 +306,37 @@ namespace Request.API.Model
                     new_activity.DoActivityThings(new_data);
                 }
             }
+            // if (trigger) {
+            //     var tmp = Process.Rules.FirstOrDefault(e => e.CurrentState.Name == source);
+            //     if (tmp == null) {
+            //         throw new Exception(nameof(TransitionRule));
+            //     }
+            //     var tmp_trigger = tmp.Trigger;
+            //     if (tmp_trigger == null)
+            //     {
+            //         throw new Exception(nameof(Trigger));
+            //     }
+            //     var conseq = tmp_trigger.Consequence;
+            //     var events = tmp_trigger.Events;
+            //     if (conseq.Name == "Campaign") {
+            //         var campaign = Data.FirstOrDefault(d => d.DataType == DataType.Campaign);
+            //         if (campaign == null) {
+            //             throw new NullReferenceException(nameof(Campaign));
+            //         }
+            //         if (conseq.Method == "AddContact") {
+            //             var e = events.First();
+            //             var c = e.Conditions.First();
+            //             if (c.Operator.ToLower() == "greaterorequal" && c.Param.ToLower() == "age" && c.Type.ToLower() == "integer") {
+            //                 var threshold = Convert.ToInt16(c.Threshold);
+            //                 var numOfContact = AddContact((Campaign)campaign, threshold);
+            //             }
+            //         }
+            //     }
+            // }
+            // if (CurrentState.StateType == StateType.end)
+            // {
+            //     throw new InvalidOperationException("Request completed");
+            // }
             if (Process.States.FirstOrDefault(s => s.Name == source).StateType == StateType.end) {
                 if (action is "approve")
                 {
@@ -562,6 +604,13 @@ namespace Request.API.Model
                         NextState = new_process.States.FirstOrDefault(s => s.Name == rule.NextState.Name),
                         Action = new_process.Actions.FirstOrDefault(a => a.Name == rule.Action.Name)
                     };
+                    // if (rule.Trigger != null) {
+                    //     var new_trigger = new Trigger {
+                    //             Consequence = rule.Trigger.Consequence,
+                    //             Events = rule.Trigger.Events
+                    //     };
+                    //     new_rule.Trigger = new_trigger;
+                    // }
                     new_process.Rules.Add(new_rule);
                 }
 

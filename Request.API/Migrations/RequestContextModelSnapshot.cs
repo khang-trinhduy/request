@@ -170,6 +170,44 @@ namespace Request.API.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("Activity");
                 });
 
+            modelBuilder.Entity("Request.API.Models.Condition", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("EventId");
+
+                    b.Property<string>("Operator");
+
+                    b.Property<string>("Param");
+
+                    b.Property<string>("Threshold");
+
+                    b.Property<string>("Type");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventId");
+
+                    b.ToTable("Condition");
+                });
+
+            modelBuilder.Entity("Request.API.Models.Consequence", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Method");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Consequence");
+                });
+
             modelBuilder.Entity("Request.API.Models.Data", b =>
                 {
                     b.Property<int>("Id")
@@ -196,6 +234,23 @@ namespace Request.API.Migrations
                     b.ToTable("Data");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("Data");
+                });
+
+            modelBuilder.Entity("Request.API.Models.Event", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.Property<int?>("TriggerId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TriggerId");
+
+                    b.ToTable("Event");
                 });
 
             modelBuilder.Entity("Request.API.Models.ExtendActivity", b =>
@@ -350,6 +405,8 @@ namespace Request.API.Migrations
 
                     b.Property<int>("ProcessId");
 
+                    b.Property<int?>("TriggerId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ActionId");
@@ -364,7 +421,28 @@ namespace Request.API.Migrations
 
                     b.HasIndex("ProcessId");
 
+                    b.HasIndex("TriggerId");
+
                     b.ToTable("Rules");
+                });
+
+            modelBuilder.Entity("Request.API.Models.Trigger", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("ConsequenceId");
+
+                    b.Property<int?>("DataId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ConsequenceId");
+
+                    b.HasIndex("DataId");
+
+                    b.ToTable("Trigger");
                 });
 
             modelBuilder.Entity("Request.API.Models.ActivityAdapter", b =>
@@ -627,6 +705,13 @@ namespace Request.API.Migrations
                         .HasForeignKey("StateId");
                 });
 
+            modelBuilder.Entity("Request.API.Models.Condition", b =>
+                {
+                    b.HasOne("Request.API.Models.Event")
+                        .WithMany("Conditions")
+                        .HasForeignKey("EventId");
+                });
+
             modelBuilder.Entity("Request.API.Models.Data", b =>
                 {
                     b.HasOne("Request.API.Models.Activity", "Activity")
@@ -636,6 +721,13 @@ namespace Request.API.Migrations
                     b.HasOne("Request.API.Model.Request", "Request")
                         .WithMany("Data")
                         .HasForeignKey("RequestId");
+                });
+
+            modelBuilder.Entity("Request.API.Models.Event", b =>
+                {
+                    b.HasOne("Request.API.Models.Trigger")
+                        .WithMany("Events")
+                        .HasForeignKey("TriggerId");
                 });
 
             modelBuilder.Entity("Request.API.Models.Node", b =>
@@ -704,6 +796,21 @@ namespace Request.API.Migrations
                         .WithMany("Rules")
                         .HasForeignKey("ProcessId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Request.API.Models.Trigger", "Trigger")
+                        .WithMany()
+                        .HasForeignKey("TriggerId");
+                });
+
+            modelBuilder.Entity("Request.API.Models.Trigger", b =>
+                {
+                    b.HasOne("Request.API.Models.Consequence", "Consequence")
+                        .WithMany()
+                        .HasForeignKey("ConsequenceId");
+
+                    b.HasOne("Request.API.Models.Data", "Data")
+                        .WithMany()
+                        .HasForeignKey("DataId");
                 });
 
             modelBuilder.Entity("Request.API.Models.ActivityAdapter", b =>

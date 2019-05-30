@@ -4,14 +4,14 @@
     "C:\\Users\\trinh\\source\\WTF\\API\\Request\\Request.API\\Request.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\trinh\\source\\WTF\\API\\catalog.api\\catalog.api.csproj": {
+    "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\catalog.api\\catalog.api.csproj",
-        "projectName": "catalog.api",
-        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\catalog.api\\catalog.api.csproj",
+        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj",
+        "projectName": "Catalog.API",
+        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj",
         "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\catalog.api\\obj\\",
+        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -33,8 +33,8 @@
               "C:\\Users\\trinh\\source\\WTF\\API\\Infrastructure\\Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Infrastructure\\Infrastructure.csproj"
               },
-              "C:\\Users\\trinh\\source\\WTF\\API\\sharedkernel\\sharedkernel.csproj": {
-                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\sharedkernel\\sharedkernel.csproj"
+              "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj"
               },
               "C:\\Users\\trinh\\source\\WTF\\API\\WebHost.Customization\\WebHost.Customization.csproj": {
                 "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\WebHost.Customization\\WebHost.Customization.csproj"
@@ -125,14 +125,14 @@
         }
       }
     },
-    "C:\\Users\\trinh\\source\\WTF\\API\\dms.api\\dms.api.csproj": {
+    "C:\\Users\\trinh\\source\\WTF\\API\\Dms.API\\Dms.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\dms.api\\dms.api.csproj",
-        "projectName": "dms.api",
-        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\dms.api\\dms.api.csproj",
+        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\Dms.API\\Dms.API.csproj",
+        "projectName": "Dms.API",
+        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Dms.API\\Dms.API.csproj",
         "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\dms.api\\obj\\",
+        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\Dms.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -151,14 +151,14 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\trinh\\source\\WTF\\API\\catalog.api\\catalog.api.csproj": {
-                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\catalog.api\\catalog.api.csproj"
+              "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj"
               },
-              "C:\\Users\\trinh\\source\\WTF\\API\\identity.api\\identity.api.csproj": {
-                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\identity.api\\identity.api.csproj"
+              "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj"
               },
-              "C:\\Users\\trinh\\source\\WTF\\API\\sharedkernel\\sharedkernel.csproj": {
-                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\sharedkernel\\sharedkernel.csproj"
+              "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj"
               }
             }
           }
@@ -198,14 +198,14 @@
         }
       }
     },
-    "C:\\Users\\trinh\\source\\WTF\\API\\identity.api\\identity.api.csproj": {
+    "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\identity.api\\identity.api.csproj",
-        "projectName": "identity.api",
-        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\identity.api\\identity.api.csproj",
+        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj",
+        "projectName": "Identity.API",
+        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj",
         "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\identity.api\\obj\\",
+        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -331,8 +331,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\trinh\\source\\WTF\\API\\sharedkernel\\sharedkernel.csproj": {
-                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\sharedkernel\\sharedkernel.csproj"
+              "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj"
               }
             }
           }
@@ -395,17 +395,17 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\trinh\\source\\WTF\\API\\catalog.api\\catalog.api.csproj": {
-                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\catalog.api\\catalog.api.csproj"
+              "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Catalog.API\\Catalog.API.csproj"
               },
-              "C:\\Users\\trinh\\source\\WTF\\API\\dms.api\\dms.api.csproj": {
-                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\dms.api\\dms.api.csproj"
+              "C:\\Users\\trinh\\source\\WTF\\API\\Dms.API\\Dms.API.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Dms.API\\Dms.API.csproj"
               },
-              "C:\\Users\\trinh\\source\\WTF\\API\\identity.api\\identity.api.csproj": {
-                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\identity.api\\identity.api.csproj"
+              "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\Identity.API\\Identity.API.csproj"
               },
-              "C:\\Users\\trinh\\source\\WTF\\API\\sharedkernel\\sharedkernel.csproj": {
-                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\sharedkernel\\sharedkernel.csproj"
+              "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj"
               }
             }
           }
@@ -419,6 +419,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Autofac": {
               "target": "Package",
               "version": "[4.9.1, )"
@@ -501,14 +505,14 @@
         }
       }
     },
-    "C:\\Users\\trinh\\source\\WTF\\API\\sharedkernel\\sharedkernel.csproj": {
+    "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\sharedkernel\\sharedkernel.csproj",
-        "projectName": "sharedkernel",
-        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\sharedkernel\\sharedkernel.csproj",
+        "projectUniqueName": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj",
+        "projectName": "SharedKernel",
+        "projectPath": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\SharedKernel.csproj",
         "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\sharedkernel\\obj\\",
+        "outputPath": "C:\\Users\\trinh\\source\\WTF\\API\\SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
