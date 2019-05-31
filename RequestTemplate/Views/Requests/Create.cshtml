@@ -668,9 +668,9 @@
         }
 
         if (!manual && !tree) {
-            request['process']['actions'] = ['auto'];
+            request['process']['actions'].push({'name': 'auto advance'});
             for (let index = 0; index < states.length - 1; index++) {
-                var rule = {'action': 'auto advance', 'currentstate': states[index], 'nextstate': states[index + 1]};
+                var rule = {'action': 'approve', 'currentstate': states[index], 'nextstate': states[index + 1]};
                 request['process']['rules'].push(rule);
             }
         }
@@ -686,7 +686,7 @@
             if (cdt > 1) {
                 for (let i = 1; i < cdt; i++) {
                     var another_rule = {};
-                    another_rule['action'] = $('#select-acti' + i.toString()).val();                     
+                    another_rule['action'] = $('#select-acti' + i.toString()).val();               
                     another_rule['currentstate'] = $('#select-cond' + i.toString()).val();                     
                     another_rule['nextstate'] = $('#select-answ' + i.toString()).val();
                     if (activate_trigger) {

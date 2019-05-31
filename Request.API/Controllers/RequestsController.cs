@@ -244,7 +244,7 @@ namespace Request.API.Controllers
 
         [HttpPut]
         [Route("SubmitAction/{id:int}")]
-        public async Task<IActionResult> CompleteTask(int id, [FromQuery]bool trigger, SubmitActionViewModel model)
+        public async Task<IActionResult> CompleteTask(int id, SubmitActionViewModel model)
         {
             var requests = await _context.Requests.Include(r => r.Process)
                 .ThenInclude(p => p.Actions).Include(r => r.Process)
@@ -273,21 +273,6 @@ namespace Request.API.Controllers
                 {
                     request.InsertData(data, model.activity);
                 }
-                if (trigger) { //TODO check if current state/node is valid before do this
-                    StreamReader rd = new StreamReader("customers.json");
-                    string json = rd.ReadToEnd();
-                    List<Contact> cs = JsonConvert.DeserializeObject<List<Contact>>(json);
-                    foreach (var c in cs)
-                    {
-                        request.InsertData(new DataCreateModel {
-                            FullName = c.FullName,
-                            Age = c.Age,
-                            Email = c.Email,
-                            PhoneNumber = c.PhoneNumber,
-                            DataType = DataType.Contact
-                        }, model.activity);
-                    }
-                }
                 _context.Update(request);
                 await _context.SaveChangesAsync();
             }
@@ -297,7 +282,7 @@ namespace Request.API.Controllers
                 return NotFound();
             }
             request.Data = await _context.Data.Where(d => d.RequestId == request.Id).ToListAsync();
-            request.CurrentState = request.Transit(model.action, model.source, model.role, model.activity, model.approver, model.data, model.doactivity, trigger);
+            request.CurrentState = request.Transit(model.action, model.source, model.role, model.activity, model.approver, model.data, model.doactivity);
             try
             {
                 _context.Update(request);

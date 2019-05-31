@@ -248,7 +248,7 @@ namespace Request.API.Model
         }
 
         public State Transit(string action, string source, string role, string activity, 
-                string approver, List<DataCreateModel> data, bool doactivity = false, bool trigger = false)
+                string approver, List<DataCreateModel> data, bool doactivity = false)
         {
             var task = Tasks.FirstOrDefault(t => t.Activity.Name.ToLower() == activity.ToLower());
             if (task is null)
